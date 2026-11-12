@@ -1,0 +1,26 @@
+
+# Secrets
+.env
+.streamlit/secrets.toml
+
+# Python environment
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local data and generated files
+vector_store/
+*.pkl
+*.index
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+data/
+notebook/
