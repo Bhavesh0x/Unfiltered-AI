@@ -29,16 +29,27 @@ st.set_page_config(
     layout="wide"
 )
 
+
 PROJECT_ROOT = Path(__file__).parent
 
 load_dotenv(PROJECT_ROOT / ".env")
 
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+def get_config(name, default=""):
+    try:
+        value = st.secrets.get(name, default)
+    except Exception:
+        value = default
 
-GROQ_MODEL = os.getenv(
+    return os.getenv(name, value)
+
+GROQ_API_KEY = get_config("GROQ_API_KEY").strip()
+
+GROQ_MODEL = get_config(
     "GROQ_MODEL",
     "openai/gpt-oss-20b"
-)
+).strip()
+
+
 
 
 # ============================================================
