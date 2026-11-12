@@ -1,10 +1,10 @@
-
+streamlit
 langchain
-langchain-core
 langchain-community
-pypdf
-pymupdf
 langchain-text-splitters
+langchain-groq
 sentence-transformers
 faiss-cpu
-chromadb
+pymupdf
+python-dotenv
+numpy
